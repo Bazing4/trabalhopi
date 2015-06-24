@@ -7,7 +7,7 @@ var router = express.Router();
  */
 router.get('/userlist', function(req, res) {
     var db = req.db;
-    var collection = db.get('userlist');
+    var collection = db.get('usuarios');
     collection.find({},{},function(e,docs){
         res.json(docs);
     });
